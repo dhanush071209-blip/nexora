@@ -27,7 +27,7 @@ import {
 
 export async function createApp(options = {}) {
   const production = process.env.NODE_ENV === "production";
-  const origin = process.env.APP_ORIGIN || "http://localhost:5173";
+  const origin = process.env.APP_ORIGIN || process.env.RENDER_EXTERNAL_URL || "http://localhost:5173";
   if (
     production &&
     (!process.env.SUPABASE_URL ||
