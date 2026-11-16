@@ -1,0 +1,532 @@
+.nx-auth {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  padding: 82px 24px 38px;
+  overflow: hidden;
+  background: #282c62;
+  color: #f2f3f5;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+.nx-auth-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 15%, #5865f266, transparent 55%),
+    radial-gradient(ellipse at 90% 95%, #14172c77, transparent 60%);
+}
+.nx-auth-shape {
+  position: absolute;
+  display: block;
+  border: 1px solid #b0b7ff1c;
+  border-radius: 28%;
+  transform: rotate(24deg);
+}
+.nx-auth-shape-one {
+  width: 470px;
+  height: 470px;
+  top: -130px;
+  left: -130px;
+  background: #8490ff08;
+  box-shadow:
+    0 0 0 35px #b0b7ff03,
+    0 0 0 36px #b0b7ff0a;
+}
+.nx-auth-shape-two {
+  width: 350px;
+  height: 350px;
+  bottom: -155px;
+  right: -90px;
+  border-radius: 50%;
+  background: #8490ff09;
+  box-shadow:
+    0 0 0 60px #b0b7ff03,
+    0 0 0 61px #b0b7ff0a;
+}
+.nx-auth-shape-three {
+  width: 95px;
+  height: 95px;
+  top: 35%;
+  right: 13%;
+  border-width: 12px;
+  border-color: #b0b7ff13;
+  transform: rotate(-18deg);
+  border-radius: 26px;
+}
+.nx-auth-brand {
+  position: absolute;
+  top: 28px;
+  left: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.nx-auth-brand span {
+  font-size: 19px;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+}
+.nx-auth-brand img {
+  border-radius: 11px;
+}
+.nx-auth-card {
+  width: 100%;
+  max-width: 480px;
+  flex-shrink: 0;
+  padding: 32px;
+  border-radius: 8px;
+  background: #313338;
+  border: 1px solid #ffffff08;
+  box-shadow: 0 14px 45px #10122255;
+}
+.nx-auth-heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.nx-auth-heading h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #f2f3f5;
+}
+.nx-auth-heading p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b5bac1;
+}
+.nx-auth-mobile-brand {
+  display: none;
+}
+.nx-auth-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  color: #858a95;
+  margin: 0 0 26px;
+}
+.nx-auth-steps > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.nx-auth-steps i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  height: 19px;
+  width: 19px;
+  border: 1px solid #777e8e77;
+  border-radius: 50%;
+  font-size: 10px;
+}
+.nx-auth-steps > span.current {
+  color: #d5d9ff;
+}
+.nx-auth-steps > span.current i {
+  background: #5865f2;
+  border-color: #5865f2;
+  color: #fff;
+}
+.nx-auth-steps > span.complete i {
+  background: #3ba55c20;
+  color: #9fd6ae;
+  border-color: #6cb78055;
+}
+.nx-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nx-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.nx-auth-field > label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.55px;
+  color: #b5bac1;
+  font-weight: 700;
+}
+.nx-auth-field > label > span {
+  color: #ef8893;
+  margin-left: 3px;
+}
+.nx-auth-field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  background: #1e1f22;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 11px 12px;
+  color: #f2f3f5;
+  font-size: 16px;
+  line-height: 22px;
+  box-shadow: none;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.nx-auth-field input::placeholder {
+  color: #727780;
+  font-size: 14px;
+}
+.nx-auth-field input:focus {
+  border-color: #8690ff;
+  box-shadow: 0 0 0 2px #5865f222;
+}
+.nx-auth-field small {
+  color: #949ba4;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.nx-auth-password {
+  position: relative;
+}
+.nx-auth-password input {
+  padding-right: 48px;
+}
+.nx-auth-password button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #949ba4;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  padding: 0;
+}
+.nx-auth-password button:hover {
+  color: #e3e5e8;
+  background: #ffffff05;
+}
+.nx-auth-submit,
+.nx-auth-google {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  padding: 11px 14px;
+  transition: background 0.16s;
+}
+.nx-auth-submit {
+  background: #5865f2;
+  color: white;
+  margin-top: 1px;
+}
+.nx-auth-submit:hover:not(:disabled) {
+  background: #4752c4;
+  color: white;
+}
+.nx-auth-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.nx-auth-google {
+  background: #383a40;
+  border: 1px solid #54565e;
+  color: #e3e5e8;
+  font-size: 14px;
+}
+.nx-auth-google:hover:not(:disabled) {
+  background: #404249;
+  color: #fff;
+}
+.nx-auth-google:disabled {
+  opacity: 0.52;
+  cursor: not-allowed;
+}
+.nx-auth button:focus-visible,
+.nx-auth a:focus-visible {
+  outline: 2px solid #b2b9ff;
+  outline-offset: 3px;
+}
+.nx-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 21px 0;
+  font-size: 11px;
+  color: #949ba4;
+}
+.nx-auth-divider > span {
+  flex: 1;
+  height: 1px;
+  background: #45474e;
+}
+.nx-auth-provider-note {
+  text-align: center;
+  margin: 9px 0 0;
+  color: #949ba4;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.nx-auth-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  color: #949ba4;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 19px 0 0;
+}
+.nx-auth-switch button {
+  background: transparent;
+  border: 0;
+  color: #9aa4ff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 3px 0;
+  min-height: 32px;
+}
+.nx-auth-switch button:hover {
+  color: #bdc4ff;
+  text-decoration: underline;
+}
+.nx-auth-privacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #949ba4;
+  font-size: 10px;
+  margin: 24px 0 0;
+  line-height: 1.5;
+  padding-top: 17px;
+  border-top: 1px solid #ffffff09;
+}
+.nx-auth-local {
+  margin: 10px 0 0;
+  color: #858a95;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 10px;
+}
+.nx-auth-footer {
+  margin-top: 22px;
+  color: #c5c8ec99;
+  font-size: 12px;
+  text-align: center;
+}
+.nx-auth-offline {
+  padding: 13px;
+  border: 1px solid #dca85c42;
+  border-radius: 5px;
+  background: #e0a94c0b;
+  display: flex;
+  gap: 10px;
+  margin: 0 0 22px;
+  color: #dfc7a3;
+}
+.nx-auth-offline > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.nx-auth-offline strong {
+  color: #e6cfad;
+  font-size: 13px;
+  font-weight: 600;
+}
+.nx-auth-offline p {
+  font-size: 12px;
+  color: #b8ab99;
+  line-height: 1.6;
+  margin: 6px 0 4px;
+}
+.nx-auth-offline button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #e5cfb4;
+  min-height: 36px;
+  padding: 4px 0;
+  font-size: 12px;
+}
+.nx-auth-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  margin-right: 18px;
+  font-size: 12px;
+  color: #bdc4ff;
+}
+.nx-auth-preview:hover {
+  color: #e0e4ff;
+  text-decoration: underline;
+}
+.nx-auth-error {
+  color: #f2a3ac;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #ee718609;
+  border-left: 3px solid #ed7b8b88;
+  border-radius: 3px;
+  padding: 11px 12px;
+  overflow-wrap: anywhere;
+}
+.nx-auth-success {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: #a8dabc;
+  background: #59bd7c12;
+  border: 1px solid #59bd7c33;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+.nx-auth-success svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.nx-spin {
+  animation: nx-spin 0.8s linear infinite;
+}
+@keyframes nx-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .nx-auth {
+    justify-content: flex-start;
+    padding: max(22px, env(safe-area-inset-top)) 20px
+      max(24px, env(safe-area-inset-bottom));
+    background: #313338;
+    min-height: 100dvh;
+  }
+  .nx-auth-pattern,
+  .nx-auth-brand {
+    display: none;
+  }
+  .nx-auth-card {
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 14px 0 0;
+    max-width: 430px;
+    background: transparent;
+  }
+  .nx-auth-mobile-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+  }
+  .nx-auth-mobile-brand img {
+    border-radius: 12px;
+  }
+  .nx-auth-heading {
+    margin-bottom: 22px;
+  }
+  .nx-auth-heading h1 {
+    font-size: 25px;
+  }
+  .nx-auth-heading p {
+    font-size: 14px;
+    max-width: 310px;
+    margin: 11px auto 0;
+  }
+  .nx-auth-steps {
+    margin-bottom: 26px;
+  }
+  .nx-auth-form {
+    gap: 20px;
+  }
+  .nx-auth-field > label {
+    font-size: 11px;
+  }
+  .nx-auth-field input {
+    min-height: 48px;
+    font-size: 16px;
+  }
+  .nx-auth-password button {
+    width: 46px;
+    height: 46px;
+  }
+  .nx-auth-submit,
+  .nx-auth-google {
+    min-height: 48px;
+  }
+  .nx-auth-switch {
+    justify-content: center;
+    margin-top: 17px;
+  }
+  .nx-auth-switch button {
+    min-height: 44px;
+    padding: 9px 4px;
+  }
+  .nx-auth-privacy {
+    margin-top: 18px;
+    font-size: 10px;
+  }
+  .nx-auth-footer {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .nx-auth {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .nx-auth-heading h1 {
+    font-size: 23px;
+  }
+  .nx-auth-heading p {
+    font-size: 13px;
+  }
+  .nx-auth-steps {
+    gap: 10px;
+  }
+  .nx-auth-steps > span {
+    font-size: 10px;
+  }
+  .nx-auth-privacy {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nx-auth *,
+  .nx-auth *::before,
+  .nx-auth *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
